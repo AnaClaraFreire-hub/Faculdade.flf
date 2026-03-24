@@ -1,0 +1,120 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #467eb2;
+}
+
+header {
+  background: #1c2838;
+  color: rgb(148, 123, 123);
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  background: #3b3636;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.tab.active {
+  background: #b5d5ff;
+  color: white;
+}
+
+.carousel {
+  display: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel.active {
+  display: block;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card {
+  min-width: 250px;
+  margin: 10px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card .content {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.card h3 {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.card button {
+  padding: 10px 16px;
+  background: #002f6c;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #002f6c;
+  color: white;
+  border: none;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.nav-btn:disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
